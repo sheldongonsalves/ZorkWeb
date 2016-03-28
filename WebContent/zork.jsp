@@ -19,18 +19,13 @@
 		<p>
 		<p>
 			<label for="name">What Room?</label>
-			<!--   <input id="name" name="name"value="${param.name}"> -->
-			 <select id="name" name="name"value="${param.name}">
-				  <option value="Foyer">Foyer</option>
-				  <option value="Front Room">Front Room</option>
-				  <option value="Library">Library</option>
-				  <option value="kitchen">Kitchen</option>
-				  <option value="Dining Room">Dining Room</option>
-				  <option value="vault">Vault</option>
-				  <option value="parlor">Parlor</option>
-				  <option value="secret room">Secret Room</option>
-			</select>
 			
+			<select id="name" name="name"value="${param.name}">
+				  <option value="${Option1}">${Option1}</option>
+				  <option value="${Option2}">${Option2}</option>
+				  <option value="${Option3}">${Option3}</option>
+				  
+			</select>
   
 			 <input type="submit" class="btn btn-default"></>
 

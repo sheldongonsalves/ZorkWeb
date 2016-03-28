@@ -28,11 +28,13 @@ public class ZorkServlet extends HttpServlet {
 	    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        // Postprocess request: gather and validate submitted data and display the result in the same JSP.
 	    	String user_input = request.getParameter("name");
+	    	
 	    	String room_name ,opt1 ,opt2 ,opt3 ,things;
 	    	
 	    	 ConnectDB connectdb = new ConnectDB();
 	    	//String room= connectdb.getRoomDetails(user_input);
 	    	 Room room=connectdb.getRoomDetails(user_input);
+	    	
 	    	 room_name=room.getName();
 	    	 opt1=room.getOption1();
 	    	 opt2=room.getOption2();
@@ -53,7 +55,7 @@ public class ZorkServlet extends HttpServlet {
 
 	        
 
-	        request.getRequestDispatcher("/index.jsp").forward(request, response);
+	        request.getRequestDispatcher("/zork.jsp").forward(request, response);
 	    }
 	    
 }
